@@ -1,0 +1,1705 @@
+Microsoft Windows [version 10.0.18363.1316]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\Youcode>mogo
+'mogo' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+C:\Users\Youcode>mongo
+MongoDB shell version v4.4.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e129d6d9-1107-4f8c-ab08-298523ee38d3") }
+MongoDB server version: 4.4.3
+---
+The server generated these startup warnings when booting:
+        2021-01-22T09:26:19.398+01:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> mongoimport -d starter -c products --type csv --file C:\Users\Youcode\Desktop\products.csv --headerline
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:15
+> ^C
+bye
+
+C:\Users\Youcode>mongoimport -d starter -c products --type csv --file C:\Users\Youcode\Desktop\products.csv --headerline
+2021-01-22T09:35:45.248+0100    connected to: mongodb://localhost/
+2021-01-22T09:35:45.433+0100    77 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Users\Youcode>mongo
+MongoDB shell version v4.4.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("32057e64-932f-4536-9069-40cbe8c6658e") }
+MongoDB server version: 4.4.3
+---
+The server generated these startup warnings when booting:
+        2021-01-22T09:26:19.398+01:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> clean
+uncaught exception: ReferenceError: clean is not defined :
+@(shell):1:1
+> db.products.find()
+> db.products.find({})
+> db.products.find().count();
+0
+> db.collections.find().products
+> db.collections.find().products;
+> db.products.find()
+> db.collections.find().products
+> db.collections.find().products;
+> db.collections.find().products;
+> db.collections.find().products
+> db.collections.find().products
+> show dbs
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+starter  0.000GB
+> use starter
+switched to db starter
+> show collections
+products
+> db.products.find().pretty()
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a0"),
+        "ProductID" : 1,
+        "ProductName" : "Chai",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "10 boxes x 20 bags",
+        "UnitPrice" : 18,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a1"),
+        "ProductID" : 2,
+        "ProductName" : "Chang",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "24 - 12 oz bottles",
+        "UnitPrice" : 19,
+        "UnitsInStock" : 17,
+        "UnitsOnOrder" : 40,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a2"),
+        "ProductID" : 3,
+        "ProductName" : "Aniseed Syrup",
+        "SupplierID" : 1,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 550 ml bottles",
+        "UnitPrice" : 10,
+        "UnitsInStock" : 13,
+        "UnitsOnOrder" : 70,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a3"),
+        "ProductID" : 5,
+        "ProductName" : "Chef Anton's Gumbo Mix",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "36 boxes",
+        "UnitPrice" : 21.35,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a4"),
+        "ProductID" : 6,
+        "ProductName" : "Grandma's Boysenberry Spread",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 8 oz jars",
+        "UnitPrice" : 25,
+        "UnitsInStock" : 120,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a5"),
+        "ProductID" : 7,
+        "ProductName" : "Uncle Bob's Organic Dried Pears",
+        "SupplierID" : 3,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "12 - 1 lb pkgs.",
+        "UnitPrice" : 30,
+        "UnitsInStock" : 15,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a6"),
+        "ProductID" : 4,
+        "ProductName" : "Chef Anton's Cajun Seasoning",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "48 - 6 oz jars",
+        "UnitPrice" : 22,
+        "UnitsInStock" : 53,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a7"),
+        "ProductID" : 9,
+        "ProductName" : "Mishi Kobe Niku",
+        "SupplierID" : 4,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "18 - 500 g pkgs.",
+        "UnitPrice" : 97,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductID" : 11,
+        "ProductName" : "Queso Cabrales",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "1 kg pkg.",
+        "UnitPrice" : 21,
+        "UnitsInStock" : 22,
+        "UnitsOnOrder" : 30,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a9"),
+        "ProductID" : 10,
+        "ProductName" : "Ikura",
+        "SupplierID" : 4,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 200 ml jars",
+        "UnitPrice" : 31,
+        "UnitsInStock" : 31,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112aa"),
+        "ProductID" : 14,
+        "ProductName" : "Tofu",
+        "SupplierID" : 6,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "40 - 100 g pkgs.",
+        "UnitPrice" : 23.25,
+        "UnitsInStock" : 35,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ab"),
+        "ProductID" : 13,
+        "ProductName" : "Konbu",
+        "SupplierID" : 6,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "2 kg box",
+        "UnitPrice" : 6,
+        "UnitsInStock" : 24,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ac"),
+        "ProductID" : 8,
+        "ProductName" : "Northwoods Cranberry Sauce",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 12 oz jars",
+        "UnitPrice" : 40,
+        "UnitsInStock" : 6,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ad"),
+        "ProductID" : 15,
+        "ProductName" : "Genen Shouyu",
+        "SupplierID" : 6,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "24 - 250 ml bottles",
+        "UnitPrice" : 15.5,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductID" : 12,
+        "ProductName" : "Queso Manchego La Pastora",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "10 - 500 g pkgs.",
+        "UnitPrice" : 38,
+        "UnitsInStock" : 86,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112af"),
+        "ProductID" : 17,
+        "ProductName" : "Alice Mutton",
+        "SupplierID" : 7,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "20 - 1 kg tins",
+        "UnitPrice" : 39,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b0"),
+        "ProductID" : 18,
+        "ProductName" : "Carnarvon Tigers",
+        "SupplierID" : 7,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "16 kg pkg.",
+        "UnitPrice" : 62.5,
+        "UnitsInStock" : 42,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b1"),
+        "ProductID" : 16,
+        "ProductName" : "Pavlova",
+        "SupplierID" : 7,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "32 - 500 g boxes",
+        "UnitPrice" : 17.45,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b2"),
+        "ProductID" : 20,
+        "ProductName" : "Sir Rodney's Marmalade",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "30 gift boxes",
+        "UnitPrice" : 81,
+        "UnitsInStock" : 40,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b3"),
+        "ProductID" : 19,
+        "ProductName" : "Teatime Chocolate Biscuits",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "10 boxes x 12 pieces",
+        "UnitPrice" : 9.2,
+        "UnitsInStock" : 25,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+Type "it" for more
+> db.products.find()
+{ "_id" : ObjectId("60084e4b620cf5891fb112a0"), "ProductID" : 1, "ProductName" : "Chai", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "10 boxes x 20 bags", "UnitPrice" : 18, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a1"), "ProductID" : 2, "ProductName" : "Chang", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "24 - 12 oz bottles", "UnitPrice" : 19, "UnitsInStock" : 17, "UnitsOnOrder" : 40, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a2"), "ProductID" : 3, "ProductName" : "Aniseed Syrup", "SupplierID" : 1, "CategoryID" : 2, "QuantityPerUnit" : "12 - 550 ml bottles", "UnitPrice" : 10, "UnitsInStock" : 13, "UnitsOnOrder" : 70, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a3"), "ProductID" : 5, "ProductName" : "Chef Anton's Gumbo Mix", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "36 boxes", "UnitPrice" : 21.35, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a4"), "ProductID" : 6, "ProductName" : "Grandma's Boysenberry Spread", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 8 oz jars", "UnitPrice" : 25, "UnitsInStock" : 120, "UnitsOnOrder" : 0, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a5"), "ProductID" : 7, "ProductName" : "Uncle Bob's Organic Dried Pears", "SupplierID" : 3, "CategoryID" : 7, "QuantityPerUnit" : "12 - 1 lb pkgs.", "UnitPrice" : 30, "UnitsInStock" : 15, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a6"), "ProductID" : 4, "ProductName" : "Chef Anton's Cajun Seasoning", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "48 - 6 oz jars", "UnitPrice" : 22, "UnitsInStock" : 53, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a7"), "ProductID" : 9, "ProductName" : "Mishi Kobe Niku", "SupplierID" : 4, "CategoryID" : 6, "QuantityPerUnit" : "18 - 500 g pkgs.", "UnitPrice" : 97, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a8"), "ProductID" : 11, "ProductName" : "Queso Cabrales", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "1 kg pkg.", "UnitPrice" : 21, "UnitsInStock" : 22, "UnitsOnOrder" : 30, "ReorderLevel" : 30, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a9"), "ProductID" : 10, "ProductName" : "Ikura", "SupplierID" : 4, "CategoryID" : 8, "QuantityPerUnit" : "12 - 200 ml jars", "UnitPrice" : 31, "UnitsInStock" : 31, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112aa"), "ProductID" : 14, "ProductName" : "Tofu", "SupplierID" : 6, "CategoryID" : 7, "QuantityPerUnit" : "40 - 100 g pkgs.", "UnitPrice" : 23.25, "UnitsInStock" : 35, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ab"), "ProductID" : 13, "ProductName" : "Konbu", "SupplierID" : 6, "CategoryID" : 8, "QuantityPerUnit" : "2 kg box", "UnitPrice" : 6, "UnitsInStock" : 24, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ac"), "ProductID" : 8, "ProductName" : "Northwoods Cranberry Sauce", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 12 oz jars", "UnitPrice" : 40, "UnitsInStock" : 6, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ad"), "ProductID" : 15, "ProductName" : "Genen Shouyu", "SupplierID" : 6, "CategoryID" : 2, "QuantityPerUnit" : "24 - 250 ml bottles", "UnitPrice" : 15.5, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ae"), "ProductID" : 12, "ProductName" : "Queso Manchego La Pastora", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "10 - 500 g pkgs.", "UnitPrice" : 38, "UnitsInStock" : 86, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112af"), "ProductID" : 17, "ProductName" : "Alice Mutton", "SupplierID" : 7, "CategoryID" : 6, "QuantityPerUnit" : "20 - 1 kg tins", "UnitPrice" : 39, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b0"), "ProductID" : 18, "ProductName" : "Carnarvon Tigers", "SupplierID" : 7, "CategoryID" : 8, "QuantityPerUnit" : "16 kg pkg.", "UnitPrice" : 62.5, "UnitsInStock" : 42, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b1"), "ProductID" : 16, "ProductName" : "Pavlova", "SupplierID" : 7, "CategoryID" : 3, "QuantityPerUnit" : "32 - 500 g boxes", "UnitPrice" : 17.45, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b2"), "ProductID" : 20, "ProductName" : "Sir Rodney's Marmalade", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "30 gift boxes", "UnitPrice" : 81, "UnitsInStock" : 40, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b3"), "ProductID" : 19, "ProductName" : "Teatime Chocolate Biscuits", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "10 boxes x 12 pieces", "UnitPrice" : 9.2, "UnitsInStock" : 25, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+Type "it" for more
+> db.products.find().pretty()
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a0"),
+        "ProductID" : 1,
+        "ProductName" : "Chai",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "10 boxes x 20 bags",
+        "UnitPrice" : 18,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a1"),
+        "ProductID" : 2,
+        "ProductName" : "Chang",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "24 - 12 oz bottles",
+        "UnitPrice" : 19,
+        "UnitsInStock" : 17,
+        "UnitsOnOrder" : 40,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a2"),
+        "ProductID" : 3,
+        "ProductName" : "Aniseed Syrup",
+        "SupplierID" : 1,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 550 ml bottles",
+        "UnitPrice" : 10,
+        "UnitsInStock" : 13,
+        "UnitsOnOrder" : 70,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a3"),
+        "ProductID" : 5,
+        "ProductName" : "Chef Anton's Gumbo Mix",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "36 boxes",
+        "UnitPrice" : 21.35,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a4"),
+        "ProductID" : 6,
+        "ProductName" : "Grandma's Boysenberry Spread",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 8 oz jars",
+        "UnitPrice" : 25,
+        "UnitsInStock" : 120,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a5"),
+        "ProductID" : 7,
+        "ProductName" : "Uncle Bob's Organic Dried Pears",
+        "SupplierID" : 3,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "12 - 1 lb pkgs.",
+        "UnitPrice" : 30,
+        "UnitsInStock" : 15,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a6"),
+        "ProductID" : 4,
+        "ProductName" : "Chef Anton's Cajun Seasoning",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "48 - 6 oz jars",
+        "UnitPrice" : 22,
+        "UnitsInStock" : 53,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a7"),
+        "ProductID" : 9,
+        "ProductName" : "Mishi Kobe Niku",
+        "SupplierID" : 4,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "18 - 500 g pkgs.",
+        "UnitPrice" : 97,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductID" : 11,
+        "ProductName" : "Queso Cabrales",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "1 kg pkg.",
+        "UnitPrice" : 21,
+        "UnitsInStock" : 22,
+        "UnitsOnOrder" : 30,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a9"),
+        "ProductID" : 10,
+        "ProductName" : "Ikura",
+        "SupplierID" : 4,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 200 ml jars",
+        "UnitPrice" : 31,
+        "UnitsInStock" : 31,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112aa"),
+        "ProductID" : 14,
+        "ProductName" : "Tofu",
+        "SupplierID" : 6,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "40 - 100 g pkgs.",
+        "UnitPrice" : 23.25,
+        "UnitsInStock" : 35,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ab"),
+        "ProductID" : 13,
+        "ProductName" : "Konbu",
+        "SupplierID" : 6,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "2 kg box",
+        "UnitPrice" : 6,
+        "UnitsInStock" : 24,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ac"),
+        "ProductID" : 8,
+        "ProductName" : "Northwoods Cranberry Sauce",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 12 oz jars",
+        "UnitPrice" : 40,
+        "UnitsInStock" : 6,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ad"),
+        "ProductID" : 15,
+        "ProductName" : "Genen Shouyu",
+        "SupplierID" : 6,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "24 - 250 ml bottles",
+        "UnitPrice" : 15.5,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductID" : 12,
+        "ProductName" : "Queso Manchego La Pastora",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "10 - 500 g pkgs.",
+        "UnitPrice" : 38,
+        "UnitsInStock" : 86,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112af"),
+        "ProductID" : 17,
+        "ProductName" : "Alice Mutton",
+        "SupplierID" : 7,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "20 - 1 kg tins",
+        "UnitPrice" : 39,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b0"),
+        "ProductID" : 18,
+        "ProductName" : "Carnarvon Tigers",
+        "SupplierID" : 7,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "16 kg pkg.",
+        "UnitPrice" : 62.5,
+        "UnitsInStock" : 42,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b1"),
+        "ProductID" : 16,
+        "ProductName" : "Pavlova",
+        "SupplierID" : 7,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "32 - 500 g boxes",
+        "UnitPrice" : 17.45,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b2"),
+        "ProductID" : 20,
+        "ProductName" : "Sir Rodney's Marmalade",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "30 gift boxes",
+        "UnitPrice" : 81,
+        "UnitsInStock" : 40,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b3"),
+        "ProductID" : 19,
+        "ProductName" : "Teatime Chocolate Biscuits",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "10 boxes x 12 pieces",
+        "UnitPrice" : 9.2,
+        "UnitsInStock" : 25,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+Type "it" for more
+> db.products.find().count();
+154
+> db.products.find().batchSize(10)
+{ "_id" : ObjectId("60084e4b620cf5891fb112a0"), "ProductID" : 1, "ProductName" : "Chai", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "10 boxes x 20 bags", "UnitPrice" : 18, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a1"), "ProductID" : 2, "ProductName" : "Chang", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "24 - 12 oz bottles", "UnitPrice" : 19, "UnitsInStock" : 17, "UnitsOnOrder" : 40, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a2"), "ProductID" : 3, "ProductName" : "Aniseed Syrup", "SupplierID" : 1, "CategoryID" : 2, "QuantityPerUnit" : "12 - 550 ml bottles", "UnitPrice" : 10, "UnitsInStock" : 13, "UnitsOnOrder" : 70, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a3"), "ProductID" : 5, "ProductName" : "Chef Anton's Gumbo Mix", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "36 boxes", "UnitPrice" : 21.35, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a4"), "ProductID" : 6, "ProductName" : "Grandma's Boysenberry Spread", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 8 oz jars", "UnitPrice" : 25, "UnitsInStock" : 120, "UnitsOnOrder" : 0, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a5"), "ProductID" : 7, "ProductName" : "Uncle Bob's Organic Dried Pears", "SupplierID" : 3, "CategoryID" : 7, "QuantityPerUnit" : "12 - 1 lb pkgs.", "UnitPrice" : 30, "UnitsInStock" : 15, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a6"), "ProductID" : 4, "ProductName" : "Chef Anton's Cajun Seasoning", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "48 - 6 oz jars", "UnitPrice" : 22, "UnitsInStock" : 53, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a7"), "ProductID" : 9, "ProductName" : "Mishi Kobe Niku", "SupplierID" : 4, "CategoryID" : 6, "QuantityPerUnit" : "18 - 500 g pkgs.", "UnitPrice" : 97, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a8"), "ProductID" : 11, "ProductName" : "Queso Cabrales", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "1 kg pkg.", "UnitPrice" : 21, "UnitsInStock" : 22, "UnitsOnOrder" : 30, "ReorderLevel" : 30, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a9"), "ProductID" : 10, "ProductName" : "Ikura", "SupplierID" : 4, "CategoryID" : 8, "QuantityPerUnit" : "12 - 200 ml jars", "UnitPrice" : 31, "UnitsInStock" : 31, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112aa"), "ProductID" : 14, "ProductName" : "Tofu", "SupplierID" : 6, "CategoryID" : 7, "QuantityPerUnit" : "40 - 100 g pkgs.", "UnitPrice" : 23.25, "UnitsInStock" : 35, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ab"), "ProductID" : 13, "ProductName" : "Konbu", "SupplierID" : 6, "CategoryID" : 8, "QuantityPerUnit" : "2 kg box", "UnitPrice" : 6, "UnitsInStock" : 24, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ac"), "ProductID" : 8, "ProductName" : "Northwoods Cranberry Sauce", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 12 oz jars", "UnitPrice" : 40, "UnitsInStock" : 6, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ad"), "ProductID" : 15, "ProductName" : "Genen Shouyu", "SupplierID" : 6, "CategoryID" : 2, "QuantityPerUnit" : "24 - 250 ml bottles", "UnitPrice" : 15.5, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ae"), "ProductID" : 12, "ProductName" : "Queso Manchego La Pastora", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "10 - 500 g pkgs.", "UnitPrice" : 38, "UnitsInStock" : 86, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112af"), "ProductID" : 17, "ProductName" : "Alice Mutton", "SupplierID" : 7, "CategoryID" : 6, "QuantityPerUnit" : "20 - 1 kg tins", "UnitPrice" : 39, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b0"), "ProductID" : 18, "ProductName" : "Carnarvon Tigers", "SupplierID" : 7, "CategoryID" : 8, "QuantityPerUnit" : "16 kg pkg.", "UnitPrice" : 62.5, "UnitsInStock" : 42, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b1"), "ProductID" : 16, "ProductName" : "Pavlova", "SupplierID" : 7, "CategoryID" : 3, "QuantityPerUnit" : "32 - 500 g boxes", "UnitPrice" : 17.45, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b2"), "ProductID" : 20, "ProductName" : "Sir Rodney's Marmalade", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "30 gift boxes", "UnitPrice" : 81, "UnitsInStock" : 40, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b3"), "ProductID" : 19, "ProductName" : "Teatime Chocolate Biscuits", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "10 boxes x 12 pieces", "UnitPrice" : 9.2, "UnitsInStock" : 25, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+Type "it" for more
+> db.products.find().batchSize(10).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a0"),
+        "ProductID" : 1,
+        "ProductName" : "Chai",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "10 boxes x 20 bags",
+        "UnitPrice" : 18,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a1"),
+        "ProductID" : 2,
+        "ProductName" : "Chang",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "24 - 12 oz bottles",
+        "UnitPrice" : 19,
+        "UnitsInStock" : 17,
+        "UnitsOnOrder" : 40,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a2"),
+        "ProductID" : 3,
+        "ProductName" : "Aniseed Syrup",
+        "SupplierID" : 1,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 550 ml bottles",
+        "UnitPrice" : 10,
+        "UnitsInStock" : 13,
+        "UnitsOnOrder" : 70,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a3"),
+        "ProductID" : 5,
+        "ProductName" : "Chef Anton's Gumbo Mix",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "36 boxes",
+        "UnitPrice" : 21.35,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a4"),
+        "ProductID" : 6,
+        "ProductName" : "Grandma's Boysenberry Spread",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 8 oz jars",
+        "UnitPrice" : 25,
+        "UnitsInStock" : 120,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a5"),
+        "ProductID" : 7,
+        "ProductName" : "Uncle Bob's Organic Dried Pears",
+        "SupplierID" : 3,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "12 - 1 lb pkgs.",
+        "UnitPrice" : 30,
+        "UnitsInStock" : 15,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a6"),
+        "ProductID" : 4,
+        "ProductName" : "Chef Anton's Cajun Seasoning",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "48 - 6 oz jars",
+        "UnitPrice" : 22,
+        "UnitsInStock" : 53,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a7"),
+        "ProductID" : 9,
+        "ProductName" : "Mishi Kobe Niku",
+        "SupplierID" : 4,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "18 - 500 g pkgs.",
+        "UnitPrice" : 97,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductID" : 11,
+        "ProductName" : "Queso Cabrales",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "1 kg pkg.",
+        "UnitPrice" : 21,
+        "UnitsInStock" : 22,
+        "UnitsOnOrder" : 30,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a9"),
+        "ProductID" : 10,
+        "ProductName" : "Ikura",
+        "SupplierID" : 4,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 200 ml jars",
+        "UnitPrice" : 31,
+        "UnitsInStock" : 31,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112aa"),
+        "ProductID" : 14,
+        "ProductName" : "Tofu",
+        "SupplierID" : 6,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "40 - 100 g pkgs.",
+        "UnitPrice" : 23.25,
+        "UnitsInStock" : 35,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ab"),
+        "ProductID" : 13,
+        "ProductName" : "Konbu",
+        "SupplierID" : 6,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "2 kg box",
+        "UnitPrice" : 6,
+        "UnitsInStock" : 24,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ac"),
+        "ProductID" : 8,
+        "ProductName" : "Northwoods Cranberry Sauce",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 12 oz jars",
+        "UnitPrice" : 40,
+        "UnitsInStock" : 6,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ad"),
+        "ProductID" : 15,
+        "ProductName" : "Genen Shouyu",
+        "SupplierID" : 6,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "24 - 250 ml bottles",
+        "UnitPrice" : 15.5,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductID" : 12,
+        "ProductName" : "Queso Manchego La Pastora",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "10 - 500 g pkgs.",
+        "UnitPrice" : 38,
+        "UnitsInStock" : 86,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112af"),
+        "ProductID" : 17,
+        "ProductName" : "Alice Mutton",
+        "SupplierID" : 7,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "20 - 1 kg tins",
+        "UnitPrice" : 39,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b0"),
+        "ProductID" : 18,
+        "ProductName" : "Carnarvon Tigers",
+        "SupplierID" : 7,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "16 kg pkg.",
+        "UnitPrice" : 62.5,
+        "UnitsInStock" : 42,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b1"),
+        "ProductID" : 16,
+        "ProductName" : "Pavlova",
+        "SupplierID" : 7,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "32 - 500 g boxes",
+        "UnitPrice" : 17.45,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b2"),
+        "ProductID" : 20,
+        "ProductName" : "Sir Rodney's Marmalade",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "30 gift boxes",
+        "UnitPrice" : 81,
+        "UnitsInStock" : 40,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b3"),
+        "ProductID" : 19,
+        "ProductName" : "Teatime Chocolate Biscuits",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "10 boxes x 12 pieces",
+        "UnitPrice" : 9.2,
+        "UnitsInStock" : 25,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+Type "it" for more
+> db.products.find({supplierID:{$eq:19}}).pretty();
+> db.products.find({SupplierID:{$eq:19}}).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112c5"),
+        "ProductID" : 40,
+        "ProductName" : "Boston Crab Meat",
+        "SupplierID" : 19,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "24 - 4 oz tins",
+        "UnitPrice" : 18.4,
+        "UnitsInStock" : 123,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112c6"),
+        "ProductID" : 41,
+        "ProductName" : "Jack's New England Clam Chowder",
+        "SupplierID" : 19,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 12 oz cans",
+        "UnitPrice" : 9.65,
+        "UnitsInStock" : 85,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e5c"),
+        "ProductID" : 40,
+        "ProductName" : "Boston Crab Meat",
+        "SupplierID" : 19,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "24 - 4 oz tins",
+        "UnitPrice" : 18.4,
+        "UnitsInStock" : 123,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e5d"),
+        "ProductID" : 41,
+        "ProductName" : "Jack's New England Clam Chowder",
+        "SupplierID" : 19,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 12 oz cans",
+        "UnitPrice" : 9.65,
+        "UnitsInStock" : 85,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+> var allProducts=db.products.find();
+> var allProducts=db.products.find();
+> while(ap.hasNext()){ printjson(ap.next()); };
+uncaught exception: ReferenceError: ap is not defined :
+@(shell):1:7
+> db.products.find()
+{ "_id" : ObjectId("60084e4b620cf5891fb112a0"), "ProductID" : 1, "ProductName" : "Chai", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "10 boxes x 20 bags", "UnitPrice" : 18, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a1"), "ProductID" : 2, "ProductName" : "Chang", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "24 - 12 oz bottles", "UnitPrice" : 19, "UnitsInStock" : 17, "UnitsOnOrder" : 40, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a2"), "ProductID" : 3, "ProductName" : "Aniseed Syrup", "SupplierID" : 1, "CategoryID" : 2, "QuantityPerUnit" : "12 - 550 ml bottles", "UnitPrice" : 10, "UnitsInStock" : 13, "UnitsOnOrder" : 70, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a3"), "ProductID" : 5, "ProductName" : "Chef Anton's Gumbo Mix", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "36 boxes", "UnitPrice" : 21.35, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a4"), "ProductID" : 6, "ProductName" : "Grandma's Boysenberry Spread", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 8 oz jars", "UnitPrice" : 25, "UnitsInStock" : 120, "UnitsOnOrder" : 0, "ReorderLevel" : 25, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a5"), "ProductID" : 7, "ProductName" : "Uncle Bob's Organic Dried Pears", "SupplierID" : 3, "CategoryID" : 7, "QuantityPerUnit" : "12 - 1 lb pkgs.", "UnitPrice" : 30, "UnitsInStock" : 15, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a6"), "ProductID" : 4, "ProductName" : "Chef Anton's Cajun Seasoning", "SupplierID" : 2, "CategoryID" : 2, "QuantityPerUnit" : "48 - 6 oz jars", "UnitPrice" : 22, "UnitsInStock" : 53, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a7"), "ProductID" : 9, "ProductName" : "Mishi Kobe Niku", "SupplierID" : 4, "CategoryID" : 6, "QuantityPerUnit" : "18 - 500 g pkgs.", "UnitPrice" : 97, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a8"), "ProductID" : 11, "ProductName" : "Queso Cabrales", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "1 kg pkg.", "UnitPrice" : 21, "UnitsInStock" : 22, "UnitsOnOrder" : 30, "ReorderLevel" : 30, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a9"), "ProductID" : 10, "ProductName" : "Ikura", "SupplierID" : 4, "CategoryID" : 8, "QuantityPerUnit" : "12 - 200 ml jars", "UnitPrice" : 31, "UnitsInStock" : 31, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112aa"), "ProductID" : 14, "ProductName" : "Tofu", "SupplierID" : 6, "CategoryID" : 7, "QuantityPerUnit" : "40 - 100 g pkgs.", "UnitPrice" : 23.25, "UnitsInStock" : 35, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ab"), "ProductID" : 13, "ProductName" : "Konbu", "SupplierID" : 6, "CategoryID" : 8, "QuantityPerUnit" : "2 kg box", "UnitPrice" : 6, "UnitsInStock" : 24, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ac"), "ProductID" : 8, "ProductName" : "Northwoods Cranberry Sauce", "SupplierID" : 3, "CategoryID" : 2, "QuantityPerUnit" : "12 - 12 oz jars", "UnitPrice" : 40, "UnitsInStock" : 6, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ad"), "ProductID" : 15, "ProductName" : "Genen Shouyu", "SupplierID" : 6, "CategoryID" : 2, "QuantityPerUnit" : "24 - 250 ml bottles", "UnitPrice" : 15.5, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112ae"), "ProductID" : 12, "ProductName" : "Queso Manchego La Pastora", "SupplierID" : 5, "CategoryID" : 4, "QuantityPerUnit" : "10 - 500 g pkgs.", "UnitPrice" : 38, "UnitsInStock" : 86, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112af"), "ProductID" : 17, "ProductName" : "Alice Mutton", "SupplierID" : 7, "CategoryID" : 6, "QuantityPerUnit" : "20 - 1 kg tins", "UnitPrice" : 39, "UnitsInStock" : 0, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 1 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b0"), "ProductID" : 18, "ProductName" : "Carnarvon Tigers", "SupplierID" : 7, "CategoryID" : 8, "QuantityPerUnit" : "16 kg pkg.", "UnitPrice" : 62.5, "UnitsInStock" : 42, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b1"), "ProductID" : 16, "ProductName" : "Pavlova", "SupplierID" : 7, "CategoryID" : 3, "QuantityPerUnit" : "32 - 500 g boxes", "UnitPrice" : 17.45, "UnitsInStock" : 29, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b2"), "ProductID" : 20, "ProductName" : "Sir Rodney's Marmalade", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "30 gift boxes", "UnitPrice" : 81, "UnitsInStock" : 40, "UnitsOnOrder" : 0, "ReorderLevel" : 0, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112b3"), "ProductID" : 19, "ProductName" : "Teatime Chocolate Biscuits", "SupplierID" : 8, "CategoryID" : 3, "QuantityPerUnit" : "10 boxes x 12 pieces", "UnitPrice" : 9.2, "UnitsInStock" : 25, "UnitsOnOrder" : 0, "ReorderLevel" : 5, "Discontinued" : 0 }
+Type "it" for more
+> db.products.find().pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a0"),
+        "ProductID" : 1,
+        "ProductName" : "Chai",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "10 boxes x 20 bags",
+        "UnitPrice" : 18,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a1"),
+        "ProductID" : 2,
+        "ProductName" : "Chang",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "24 - 12 oz bottles",
+        "UnitPrice" : 19,
+        "UnitsInStock" : 17,
+        "UnitsOnOrder" : 40,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a2"),
+        "ProductID" : 3,
+        "ProductName" : "Aniseed Syrup",
+        "SupplierID" : 1,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 550 ml bottles",
+        "UnitPrice" : 10,
+        "UnitsInStock" : 13,
+        "UnitsOnOrder" : 70,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a3"),
+        "ProductID" : 5,
+        "ProductName" : "Chef Anton's Gumbo Mix",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "36 boxes",
+        "UnitPrice" : 21.35,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a4"),
+        "ProductID" : 6,
+        "ProductName" : "Grandma's Boysenberry Spread",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 8 oz jars",
+        "UnitPrice" : 25,
+        "UnitsInStock" : 120,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a5"),
+        "ProductID" : 7,
+        "ProductName" : "Uncle Bob's Organic Dried Pears",
+        "SupplierID" : 3,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "12 - 1 lb pkgs.",
+        "UnitPrice" : 30,
+        "UnitsInStock" : 15,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a6"),
+        "ProductID" : 4,
+        "ProductName" : "Chef Anton's Cajun Seasoning",
+        "SupplierID" : 2,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "48 - 6 oz jars",
+        "UnitPrice" : 22,
+        "UnitsInStock" : 53,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a7"),
+        "ProductID" : 9,
+        "ProductName" : "Mishi Kobe Niku",
+        "SupplierID" : 4,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "18 - 500 g pkgs.",
+        "UnitPrice" : 97,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductID" : 11,
+        "ProductName" : "Queso Cabrales",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "1 kg pkg.",
+        "UnitPrice" : 21,
+        "UnitsInStock" : 22,
+        "UnitsOnOrder" : 30,
+        "ReorderLevel" : 30,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a9"),
+        "ProductID" : 10,
+        "ProductName" : "Ikura",
+        "SupplierID" : 4,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "12 - 200 ml jars",
+        "UnitPrice" : 31,
+        "UnitsInStock" : 31,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112aa"),
+        "ProductID" : 14,
+        "ProductName" : "Tofu",
+        "SupplierID" : 6,
+        "CategoryID" : 7,
+        "QuantityPerUnit" : "40 - 100 g pkgs.",
+        "UnitPrice" : 23.25,
+        "UnitsInStock" : 35,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ab"),
+        "ProductID" : 13,
+        "ProductName" : "Konbu",
+        "SupplierID" : 6,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "2 kg box",
+        "UnitPrice" : 6,
+        "UnitsInStock" : 24,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ac"),
+        "ProductID" : 8,
+        "ProductName" : "Northwoods Cranberry Sauce",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 12 oz jars",
+        "UnitPrice" : 40,
+        "UnitsInStock" : 6,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ad"),
+        "ProductID" : 15,
+        "ProductName" : "Genen Shouyu",
+        "SupplierID" : 6,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "24 - 250 ml bottles",
+        "UnitPrice" : 15.5,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductID" : 12,
+        "ProductName" : "Queso Manchego La Pastora",
+        "SupplierID" : 5,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "10 - 500 g pkgs.",
+        "UnitPrice" : 38,
+        "UnitsInStock" : 86,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112af"),
+        "ProductID" : 17,
+        "ProductName" : "Alice Mutton",
+        "SupplierID" : 7,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "20 - 1 kg tins",
+        "UnitPrice" : 39,
+        "UnitsInStock" : 0,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 1
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b0"),
+        "ProductID" : 18,
+        "ProductName" : "Carnarvon Tigers",
+        "SupplierID" : 7,
+        "CategoryID" : 8,
+        "QuantityPerUnit" : "16 kg pkg.",
+        "UnitPrice" : 62.5,
+        "UnitsInStock" : 42,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b1"),
+        "ProductID" : 16,
+        "ProductName" : "Pavlova",
+        "SupplierID" : 7,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "32 - 500 g boxes",
+        "UnitPrice" : 17.45,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b2"),
+        "ProductID" : 20,
+        "ProductName" : "Sir Rodney's Marmalade",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "30 gift boxes",
+        "UnitPrice" : 81,
+        "UnitsInStock" : 40,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112b3"),
+        "ProductID" : 19,
+        "ProductName" : "Teatime Chocolate Biscuits",
+        "SupplierID" : 8,
+        "CategoryID" : 3,
+        "QuantityPerUnit" : "10 boxes x 12 pieces",
+        "UnitPrice" : 9.2,
+        "UnitsInStock" : 25,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 5,
+        "Discontinued" : 0
+}
+Type "it" for more
+> db.products.find({CategoryID:4},{ProductName:1}).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112bd"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112be"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{ "_id" : ObjectId("60084e4b620cf5891fb112c8"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112da"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112db"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e4"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e6"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ec"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e46"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e47"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4d"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4e"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{ "_id" : ObjectId("600a8e6196545e58066b5e55"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e6e"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e70"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e79"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e7e"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e80"),
+        "ProductName" : "Flotemysost"
+}
+> db.products.find({CategoryID:4},{ProductName:1}).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112bd"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112be"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{ "_id" : ObjectId("60084e4b620cf5891fb112c8"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112da"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112db"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e4"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e6"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ec"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e46"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e47"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4d"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4e"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{ "_id" : ObjectId("600a8e6196545e58066b5e55"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e6e"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e70"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e79"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e7e"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e80"),
+        "ProductName" : "Flotemysost"
+}
+> db.products.find({CategoryID:4},{ProductName:1}).sort({ProductName:-1}).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112da"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e70"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e47"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e46"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e4"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e79"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112be"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4e"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e6"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e7e"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112bd"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4d"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{ "_id" : ObjectId("60084e4b620cf5891fb112c8"), "ProductName" : "Geitost" }
+{ "_id" : ObjectId("600a8e6196545e58066b5e55"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ec"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e80"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112db"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e6e"),
+        "ProductName" : "Camembert Pierrot"
+}
+> db.products.find({CategoryID:4},{ProductName:1}).sort({ProductName:-1}).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112da"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e70"),
+        "ProductName" : "Raclette Courdavault"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ae"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e47"),
+        "ProductName" : "Queso Manchego La Pastora"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a8"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e46"),
+        "ProductName" : "Queso Cabrales"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e4"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e79"),
+        "ProductName" : "Mozzarella di Giovanni"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112be"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4e"),
+        "ProductName" : "Mascarpone Fabioli"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e6"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e7e"),
+        "ProductName" : "Gudbrandsdalsost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112bd"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e4d"),
+        "ProductName" : "Gorgonzola Telino"
+}
+{ "_id" : ObjectId("60084e4b620cf5891fb112c8"), "ProductName" : "Geitost" }
+{ "_id" : ObjectId("600a8e6196545e58066b5e55"), "ProductName" : "Geitost" }
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112ec"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e80"),
+        "ProductName" : "Flotemysost"
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112db"),
+        "ProductName" : "Camembert Pierrot"
+}
+{
+        "_id" : ObjectId("600a8e6196545e58066b5e6e"),
+        "ProductName" : "Camembert Pierrot"
+}
+> db.products.find().limit(2);
+{ "_id" : ObjectId("60084e4b620cf5891fb112a0"), "ProductID" : 1, "ProductName" : "Chai", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "10 boxes x 20 bags", "UnitPrice" : 18, "UnitsInStock" : 39, "UnitsOnOrder" : 0, "ReorderLevel" : 10, "Discontinued" : 0 }
+{ "_id" : ObjectId("60084e4b620cf5891fb112a1"), "ProductID" : 2, "ProductName" : "Chang", "SupplierID" : 1, "CategoryID" : 1, "QuantityPerUnit" : "24 - 12 oz bottles", "UnitPrice" : 19, "UnitsInStock" : 17, "UnitsOnOrder" : 40, "ReorderLevel" : 25, "Discontinued" : 0 }
+> db.products.find().limit(2).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a0"),
+        "ProductID" : 1,
+        "ProductName" : "Chai",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "10 boxes x 20 bags",
+        "UnitPrice" : 18,
+        "UnitsInStock" : 39,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 10,
+        "Discontinued" : 0
+}
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112a1"),
+        "ProductID" : 2,
+        "ProductName" : "Chang",
+        "SupplierID" : 1,
+        "CategoryID" : 1,
+        "QuantityPerUnit" : "24 - 12 oz bottles",
+        "UnitPrice" : 19,
+        "UnitsInStock" : 17,
+        "UnitsOnOrder" : 40,
+        "ReorderLevel" : 25,
+        "Discontinued" : 0
+}
+> db.products.find().sort({ProductID:-1}).limit(1).pretty();
+{
+        "_id" : ObjectId("60084e4b620cf5891fb112e9"),
+        "ProductID" : 77,
+        "ProductName" : "Original Frankfurter grÃ¼ne SoÃŸe",
+        "SupplierID" : 12,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 boxes",
+        "UnitPrice" : 13,
+        "UnitsInStock" : 32,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 15,
+        "Discontinued" : 0
+}
+> db.products.insert(
+... {
+...         "_id" : ObjectId("60054a6cd020a8ea8dfd8064"),
+...         "ProductID" : 78,
+...         "ProductName" : "Raclette Marocaine",
+...         "SupplierID" : 28,
+...         "CategoryID" : 4,
+...         "QuantityPerUnit" : "5 kg pkg.",
+...         "UnitPrice" : 65,
+...         "UnitsInStock" : 179,
+...         "UnitsOnOrder" : 10,
+...         "ReorderLevel" : 0,
+...         "Discontinued" : 0
+... }
+... ) ;
+WriteResult({ "nInserted" : 1 })
+> db.products.insert(
+... {
+...         "ProductID" : 78,
+...         "ProductName" : "Raclette Marocaine",
+...         "SupplierID" : 28,
+...         "CategoryID" : 4,
+...         "QuantityPerUnit" : "5 kg pkg.",
+...         "UnitPrice" : 65,
+...         "UnitsInStock" : 179,
+...         "UnitsOnOrder" : 10,
+...         "ReorderLevel" : 0,
+...         "Discontinued" : 0
+... }
+... ) ;
+WriteResult({ "nInserted" : 1 })
+> db.products.insertMany(
+... [{
+...         "ProductID" : 79,
+...         "ProductName" : "Sirop d'érable Marocain",
+...         "SupplierID" : 29,
+...         "CategoryID" : 2,
+...         "QuantityPerUnit" : "24 - 500 ml bottles",
+...         "UnitPrice" : 28.5,
+...         "UnitsInStock" : 113,
+...         "UnitsOnOrder" : 0,
+...         "ReorderLevel" : 25,
+...         "Discontinued" : 0
+... }
+... ,
+... {
+...         "ProductID" : 80,
+...         "ProductName" : "Moroccan Steeleye Stout",
+...         "SupplierID" : 16,
+...         "CategoryID" : 1,
+...         "QuantityPerUnit" : "24 - 12 oz bottles",
+...         "UnitPrice" : 18,
+...         "UnitsInStock" : 20,
+...         "UnitsOnOrder" : 0,
+...         "ReorderLevel" : 15,
+...         "Discontinued" : 0
+... }
+... ]
+... );
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("600a939dfea12a303f80c779"),
+                ObjectId("600a939dfea12a303f80c77a")
+        ]
+}
+> db.products.insert(
+... {
+...         "ProductID" : 81,
+...         "ProductName" : "Raclette Marocaine Spéciale",
+...         "SupplierID" : 28,
+...         "CategoryID" : 4,
+...         "QuantityPerUnit" : "5 kg pkg.",
+...         "UnitPrice" : 65,
+...         "UnitsInStock" : 179,
+...         "UnitsOnOrder" : 10,
+...         "ReorderLevel" : 0,
+...         "Discontinued" : 0,
+... "DateFirstShip": new Date()
+... }
+... ) ;
+WriteResult({ "nInserted" : 1 })
+> db.products.find({DateFirstShip:{$exists:true}}) ;
+{ "_id" : ObjectId("600a93b6fea12a303f80c77b"), "ProductID" : 81, "ProductName" : "Raclette Marocaine Spéciale", "SupplierID" : 28, "CategoryID" : 4, "QuantityPerUnit" : "5 kg pkg.", "UnitPrice" : 65, "UnitsInStock" : 179, "UnitsOnOrder" : 10, "ReorderLevel" : 0, "Discontinued" : 0, "DateFirstShip" : ISODate("2021-01-22T08:58:30.705Z") }
+> db.products.find({DateFirstShip:{$exists:true}}).pretty();
+{
+        "_id" : ObjectId("600a93b6fea12a303f80c77b"),
+        "ProductID" : 81,
+        "ProductName" : "Raclette Marocaine Spéciale",
+        "SupplierID" : 28,
+        "CategoryID" : 4,
+        "QuantityPerUnit" : "5 kg pkg.",
+        "UnitPrice" : 65,
+        "UnitsInStock" : 179,
+        "UnitsOnOrder" : 10,
+        "ReorderLevel" : 0,
+        "Discontinued" : 0,
+        "DateFirstShip" : ISODate("2021-01-22T08:58:30.705Z")
+}
+> db.shutdownServer();
+shutdown command only works with the admin database; try 'use admin'
+> Exécuter quit() ;
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:9
+>
